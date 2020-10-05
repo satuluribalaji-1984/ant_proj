@@ -14,10 +14,6 @@ import java.util.Date;
 import java.util.List;
 import org.apache.commons.lang.math.NumberUtils;
 
-/**
- *
- * @author srinivas.n
- */
 public class NewClass {
     public static MongoClient m = null;
     //yyyy-MM-ddTHH:mm:SS.SSSZ+5:30
@@ -31,7 +27,7 @@ public class NewClass {
         for (String server : servers) {
             String[] serv = server.split(":");
             String serverIp = serv[0];
-            String port = "27017";
+            String port = "8080";
             if (serv.length > 1) {
                 port = serv[1];
             }
@@ -39,9 +35,9 @@ public class NewClass {
         }
         m = new MongoClient(serversList);
         if (bAdminAuthEnabled) {
-            String mAdminDBName = "admin";
-            String uname = "AppUser";
-            String password = "csKz4piRsRg1";
+            String mAdminDBName = "test";
+            String uname = "user1";
+            String password = "pwd";
             System.out.println("111Mongo dbname: " + mAdminDBName + " uname: " + uname + " password: " + password);
             if (uname != null && password != null) {
                 if (!m.getDB(mAdminDBName).authenticate(uname, password.toCharArray())) {
