@@ -22,8 +22,8 @@ public class NewClass {
     public static MongoClient m = null;
     //yyyy-MM-ddTHH:mm:SS.SSSZ+5:30
 	public static final String ENCODING="DES";
-	private static String STRPASSWORD="password";
-	private static String STR_SECRET="secret";
+	private static String PASSWORD="password";
+	private static String SECRET="secret";
     public static void main1(String[] args) throws UnknownHostException {
         boolean bAdminAuthEnabled = true;
         String[] servers = args[0].split(",");
@@ -60,6 +60,16 @@ public class NewClass {
         System.out.println(sf.format(new Date()));
 		String PASSWORD = "password";
 		String SECRET_KEY="secret";
+		while(true){
+			if (PASSWORD != null && PASSWORD.length() > 0){
+				System.out.println("given password has some length");
+				break;
+			}else{
+				System.out.println("given password has empty");				
+				System.exit();				
+			}
+		}
+			
     }
 
     /* ParseWords : allows the parsing of words based upon the count, return the number of words.
