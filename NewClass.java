@@ -18,8 +18,8 @@ public class NewClass {
     public static MongoClient m = null;
     //yyyy-MM-ddTHH:mm:SS.SSSZ+5:30
 	public static final String ENCODING="DES";
-	private static String PASSWORD="password";
-	private static String SECRET="secret";
+	private static String PASSWORD="AZURE_PASSWORD";
+	private static String SECRET="AZURE_SECRET";
     public static void main1(String[] args) throws UnknownHostException {
         boolean bAdminAuthEnabled = true;
         String[] servers = args[0].split(",");
@@ -55,7 +55,7 @@ public class NewClass {
     public static void main(String[] args) {
         System.out.println(sf.format(new Date()));
 		String PASSWORD = "password";
-		String SECRET_KEY="secret";
+		String SECRET_KEY="AZURE_SECRET";
 		while(true){
 			if (PASSWORD != null && PASSWORD.length() > 0){
 				System.out.println("given password has some length");
