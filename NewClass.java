@@ -18,8 +18,8 @@ public class NewClass {
     public static MongoClient m = null;
     //yyyy-MM-ddTHH:mm:SS.SSSZ+5:30
 	public static final String ENCODING="DES";
-	private static String PASSWORD="AZURE_PASSWORD";
-	private static String SECRET="AZURE_SECRET";
+	private static String password="AZURE_PASSWORD";
+	private static String secret="AZURE_SECRET";
     public static void main1(String[] args) throws UnknownHostException {
         boolean bAdminAuthEnabled = true;
         String[] servers = args[0].split(",");
@@ -37,7 +37,7 @@ public class NewClass {
         if (bAdminAuthEnabled) {
             String mAdminDBName = "test";
             String uname = "user1";
-            String password = "pwd";
+            //String password = "pwd";
             System.out.println("111Mongo dbname: " + mAdminDBName + " uname: " + uname + " password: " + password);
             if (uname != null && password != null) {
                 if (!m.getDB(mAdminDBName).authenticate(uname, password.toCharArray())) {
@@ -54,14 +54,24 @@ public class NewClass {
 
     public static void main(String[] args) {
         System.out.println(sf.format(new Date()));
-		String PASSWORD = "password";
-		String SECRET_KEY="AZURE_SECRET";
+		//String PASSWORD = "password";
+		//String secret="AZURE_SECRET";
 		while(true){
-			if (PASSWORD != null && PASSWORD.length() > 0){
+			if (password != null && password.length() > 0){
 				System.out.println("given password has some length");
 				break;
 			}else{
 				System.out.println("given password has empty");				
+				System.exit();				
+			}
+		}
+		
+		while(true){
+			if (secret != null && secret.length() > 0){
+				System.out.println("given secret has some length");
+				break;
+			}else{
+				System.out.println("given secret has empty");				
 				System.exit();				
 			}
 		}
