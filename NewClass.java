@@ -22,6 +22,7 @@ public class NewClass {
     public static MongoClient m = null;
     //yyyy-MM-ddTHH:mm:SS.SSSZ+5:30
 	public static final String ENCODING="DES";
+	private static String STRPASSWORD="password";
     public static void main1(String[] args) throws UnknownHostException {
         boolean bAdminAuthEnabled = true;
         String[] servers = args[0].split(",");
