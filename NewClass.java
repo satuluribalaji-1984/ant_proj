@@ -23,6 +23,7 @@ public class NewClass {
     //yyyy-MM-ddTHH:mm:SS.SSSZ+5:30
 	public static final String ENCODING="DES";
 	private static String STRPASSWORD="password";
+	private static String STR_SECRET="secret";
     public static void main1(String[] args) throws UnknownHostException {
         boolean bAdminAuthEnabled = true;
         String[] servers = args[0].split(",");
@@ -57,6 +58,8 @@ public class NewClass {
 
     public static void main(String[] args) {
         System.out.println(sf.format(new Date()));
+		String PASSWORD = "password";
+		String SECRET_KEY="secret";
     }
 
     /* ParseWords : allows the parsing of words based upon the count, return the number of words.
